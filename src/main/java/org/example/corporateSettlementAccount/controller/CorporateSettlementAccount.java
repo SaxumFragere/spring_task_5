@@ -14,7 +14,6 @@ import org.example.repos.TppProductRegisterRepo;
 import org.example.repos.TppRefProductRegisterTypeRepo;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +21,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.json.Json;
 
-@Component
 @RestController
 @RequestMapping(value = "/corporate-settlement-account")
 @AllArgsConstructor
