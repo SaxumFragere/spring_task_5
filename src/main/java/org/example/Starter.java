@@ -8,6 +8,6 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 public class Starter {
     public static void main(String[] args) {
-        SpringApplication.run(Starter.class);
+        SpringApplication.run(Starter.class, args);
     }
 }
