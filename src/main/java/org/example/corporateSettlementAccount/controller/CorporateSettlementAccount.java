@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.json.Json;
 
 @RestController
-@RequestMapping(value = "/corporate-settlement-account")
+@RequestMapping("/corporate-settlement-account")
 @AllArgsConstructor
 public class CorporateSettlementAccount {
 
@@ -32,7 +32,7 @@ public class CorporateSettlementAccount {
     AccountRepo accountRepo;
 
     @PostMapping("/create")
-    public ResponseEntity<String> create(@Valid @RequestBody CorporateSettlementAccountDTO corporateSettlementAccountDTO) {
+    public ResponseEntity<Object> create(@Valid @RequestBody CorporateSettlementAccountDTO corporateSettlementAccountDTO) {
 
         TppProductRegister tppProductRegister = tppProductRegisterRepo.findByProductIdAndType(corporateSettlementAccountDTO.getInstanceId(), corporateSettlementAccountDTO.getRegistryTypeCode());
         if (tppProductRegister != null){
